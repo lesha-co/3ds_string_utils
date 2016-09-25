@@ -2,6 +2,7 @@
 // Created by lichevsky on 03.09.16.
 //
 #include "string_utils.h"
+using namespace std;
 string resetColor(){
     return "\x1b[0m";
 }
