@@ -21,15 +21,15 @@ typedef enum {
     COLOR_WHITE = 7,
 } colors_t;
 
-using  namespace std;
+std::string resetColor();
 
-string resetColor();
+std::string setColor(colors_t foreground, colors_t background);
 
-string setColor(colors_t foreground, colors_t background);
+std::string colorize(colors_t foreground, colors_t background, std::string text);
 
-string colorize(colors_t foreground, colors_t background, string text);
+std::string colorize(colors_t foreground, std::string text);
 
-string colorize(colors_t foreground, string text);
+std::string position(u32 line, u32 column);
 
-string position(u32 line, u32 column);
+std::string repeat(std::string in, u32 times);
 #endif //FONT_STRING_UTILS_H
