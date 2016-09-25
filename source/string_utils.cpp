@@ -27,3 +27,10 @@ string position(u32 line, u32 column){
     stringStream << "\x1b[" << line << ";" << column << "H";
     return stringStream.str();
 }
+string repeat(string in, u32 times){
+    string s = "";
+    for (u32 i = 0; i < times; ++i) {
+        s += in;
+    }
+    return s;
+}
