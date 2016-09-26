@@ -27,7 +27,7 @@ std::string setColor(colors_t foreground, colors_t background);
 
 std::string colorize(colors_t foreground, colors_t background, std::string text);
 
-std::string colorize(colors_t foreground, std::string text);
+std::string setTextColor(colors_t foreground);
 
 std::string position(u32 line, u32 column);
 

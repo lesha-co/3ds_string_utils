@@ -19,8 +19,10 @@ string colorize(colors_t foreground, colors_t background, string text){
     return stringStream.str();
 }
 
-string colorize(colors_t foreground, string text){
-    return colorize(foreground, COLOR_BLACK, text);
+string setTextColor(colors_t foreground){
+    std::ostringstream stringStream;
+    stringStream << "\x1b[3" << foreground << "m";
+    return stringStream.str();
 }
 
 string position(u32 line, u32 column){
