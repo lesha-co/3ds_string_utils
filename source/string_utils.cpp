@@ -37,3 +37,13 @@ string repeat(string in, u32 times){
     }
     return s;
 }
+string draw_progressbar(u32 width, double progress){
+
+    if(progress<0){
+        return repeat(PROGRESSBAR_FILLED+PROGRESSBAR_EMPTY, (width+1)/2).substr(0, width);
+    } else {
+        u32 filled = (u32)(width * progress);
+        return repeat(PROGRESSBAR_FILLED, filled) + repeat(PROGRESSBAR_EMPTY, (width-filled));
+    }
+
+}

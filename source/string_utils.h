@@ -20,6 +20,8 @@ typedef enum {
     COLOR_CYAN = 6,
     COLOR_WHITE = 7,
 } colors_t;
+const std::string PROGRESSBAR_EMPTY = {(char)0xB0};
+const std::string PROGRESSBAR_FILLED = {(char)0xDB};
 
 std::string resetColor();
 
@@ -32,4 +34,6 @@ std::string setTextColor(colors_t foreground);
 std::string position(u32 line, u32 column);
 
 std::string repeat(std::string in, u32 times);
+
+std::string draw_progressbar(u32 width, double progress);
 #endif //FONT_STRING_UTILS_H
